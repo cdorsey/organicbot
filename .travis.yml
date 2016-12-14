@@ -1,6 +1,6 @@
 language: go
 deploy:
-  providor: script
+  provider: script
   script:
     - cat $SSH_KEY > ssh_key
     - go build -o ./organicbot $GOPATH/src/github.com/cdorsey/organicbot
