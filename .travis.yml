@@ -7,8 +7,6 @@ deploy:
   skip_cleanup: true
   provider: script
   script: sh ./deploy.sh
-  on:
-    branch: ci-testing
 
 addons:
   ssh_known_hosts: chase-dorsey.com
