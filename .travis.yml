@@ -10,6 +10,6 @@ after_install:
 deploy:
   skip_cleanup: true
   provider: script
-  script: deploy.sh
+  script: sh ./deploy.sh
   on:
     branch: ci-testing
