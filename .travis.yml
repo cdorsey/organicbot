@@ -3,6 +3,10 @@ language: go
 # before_deploy:
   # - go build -o ./organicbot $GOPATH/src/github.com/cdorsey/organicbot
 
+after_install:
+  - pwd
+  - ls
+
 deploy:
   skip_cleanup: true
   provider: script
