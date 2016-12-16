@@ -1,7 +1,17 @@
 language: go
+
+before_deploy:
+  - go build -o ./organicbot github.com/cdorsey/organicbot
+
 deploy:
+  skip_cleanup: true
   provider: script
-  script:
-    - cat $SSH_KEY > ssh_key
-    - go build -o ./organicbot $GOPATH/src/github.com/cdorsey/organicbot
-    - scp -i ./ssh_key ./organicbot $REMOTE_FILE
+  script: sh ./deploy.sh
+  on:
+    branch: ci-testing
+
+addons:
+  ssh_known_hosts: chase-dorsey.com
+
+notifications:
+  email: false
