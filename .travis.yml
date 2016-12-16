@@ -1,7 +1,7 @@
 language: go
 
 before_deploy:
-  - go build -o ./organicbot $GOPATH/src/github.com/cdorsey/organicbot
+  - go build -o ./organicbot github.com/cdorsey/organicbot
 
 after_install:
   - pwd
