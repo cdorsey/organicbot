@@ -1,7 +1,7 @@
 language: go
 
-# before_deploy:
-  # - go build -o ./organicbot $GOPATH/src/github.com/cdorsey/organicbot
+before_deploy:
+  - go build -o ./organicbot $GOPATH/src/github.com/cdorsey/organicbot
 
 after_install:
   - pwd
@@ -13,3 +13,6 @@ deploy:
   script: sh ./deploy.sh
   on:
     branch: ci-testing
+
+addons:
+  ssh_known_hosts: chase-dorsey.com
