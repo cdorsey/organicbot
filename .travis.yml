@@ -1,7 +1,7 @@
 language: go
 
-before_deploy:
-  - go build -o ./organicbot $GOPATH/src/github.com/cdorsey/organicbot
+# before_deploy:
+  # - go build -o ./organicbot $GOPATH/src/github.com/cdorsey/organicbot
 
 deploy:
   skip_cleanup: true
