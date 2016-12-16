@@ -1,5 +1,5 @@
 pwd
 ls
-echo "${SSH_KEY}" > ssh_key
-chmod 400 ./ssh_key
-scp -i ./ssh_key ./organicbot $REMOTE_FILE
+echo "${SSH_KEY}" > ~/.ssh/id_rsa
+chmod 400 ~/.ssh/id_rsa
+scp ./organicbot $REMOTE_FILE
