@@ -1,9 +1,6 @@
 language: go
 deploy:
   provider: script
-  script:
-    - cat $SSH_KEY > ssh_key
-    - go build -o ./organicbot $GOPATH/src/github.com/cdorsey/organicbot
-    - scp -i ./ssh_key ./organicbot $REMOTE_FILE
+  script: deploy.sh
   on:
     branch: ci-testing
